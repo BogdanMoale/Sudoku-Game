@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  gap: 1px;
+  background-color: #ddd;
+  margin-top: 20px;
+  border: 2px solid #000;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #fff;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-top: 3px solid #000;
+  border-left: 3px solid #000;
+
+  /* Add thicker borders for the subgrid boundaries */
+  :nth-child(9n + 4),
+  :nth-child(9n + 7) {
+    border-right: 3px solid #000;
+  }
+
+  :nth-child(3n + 1),
+  :nth-child(3n + 2) {
+    border-top: 3px solid #000;
+  }
+
+  :nth-child(n + 19):nth-child(-n + 27),
+  :nth-child(n + 46):nth-child(-n + 54) {
+    border-bottom: 3px solid #000;
+  }
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  font-size: 16px;
+  margin: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cell.valid {
+  background-color: #c4f1c4; /* Light green for valid cells */
+}
+
+.cell.invalid {
+  background-color: #f5c4c4; /* Light red for invalid cells */
+}
