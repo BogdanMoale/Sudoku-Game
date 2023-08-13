@@ -21,4 +21,4 @@ A simple web-based Sudoku game where players can solve Sudoku puzzles and test t
 * Click the "Generate" button to create a new random puzzle.
 
 # Try It Out
-You can play the Sudoku game here:
+You can play the Sudoku game here: https://bogdanmoale.github.io/Sudoku-Game/
